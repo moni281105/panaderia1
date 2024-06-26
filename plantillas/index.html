@@ -1,0 +1,138 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAGAWINNES  </title>
+    <link type= "text/css"  href='{% static "CSS/index.css" %}' rel="stylesheet"/>
+    <style>
+        body {
+        margin: 0;
+        font-family: Arial, sans-serif; /* Fuente del texto */
+        background-color: #f0f0f0; /* Color de fondo del cuerpo */
+        background-image: url('{% static "CSS/FONDO.jpg" %}');
+        background-attachment: fixed; /* Fija la imagen de fondo mientras se desplaza la página */
+        margin: 0; /* Elimina el margen predeterminado del cuerpo */
+        font-family: Arial, sans-serif; /* Fuente del texto */
+        }
+        header {
+        background-color: #8585855d; /* Color de fondo del encabezado */
+        text-align: center; /* Centra el texto horizontalmente */
+        height: 200px; /* Altura del encabezado */
+        width: 100%;
+        box-sizing: border-box; /* Incluye el padding y border en el ancho total */
+        padding: 0 20px; /* Espaciado interno izquierdo y derecho */
+        }
+
+
+        h1 {
+        color: #d6c9c9; /* Color del texto */
+        height: 130px;
+        margin: 0; /* Elimina el margen predeterminado del encabezado */
+        font-size: 70px; /* Tamaño del texto */
+        }
+        h2 {
+            color: #e0dcdc; /* Color del texto del h2 */
+            font-size: 10px; /* Tamaño del texto del h2 */
+            margin: 0; /* Elimina el margen superior e inferior del h2 */
+            height: 100;
+        }
+        .logo{
+           position: absolute;
+           height: 0px;
+            width: 0px;
+            top: 10px; /* Separación de 20px desde el borde superior */
+            right: 10px; /* Separación de 20px desde el borde derecho */
+ 
+        }
+        .logo img{
+            position: absolute;
+            height: 150px;
+            width: 150px; 
+            top: 10px; /* Separación de 20px desde el borde superior */
+            right: 10px; /* Separación de 20px desde el borde derecho */
+        }
+        .mi-section {
+            display: flex;
+            width: 100%;
+            height: 500px;
+        }
+
+        .mi-section img {
+            width: 0px;
+            flex-grow: 1;
+            opacity: 0.8;
+            transition: width 0.5s, opacity 0.5s;
+            filter: brightness(150%);
+        }
+
+        .mi-section img:hover {
+            cursor: crosshair;
+            height: 500px;
+            width: 300px;
+            opacity: 1;
+            filter: contrast(120%);
+            filter: brightness(200%);
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            height: 102px;
+            width: 100%;
+            opacity: 0.5;
+
+        }
+ 
+        body {
+            overflow: hidden; /* Oculta el desbordamiento horizontal */
+            margin-bottom: 20px; /* Separación de 20px desde el borde inferior */
+            padding-bottom: 20px; 
+        }
+        .centro{
+
+            color: #fff;
+            position: absolute;
+            animation: recorrer 10s linear infinite;
+            right: 0%;
+            font-size: 20px; /* Tamaño del texto del h2 */
+           top: 93%; /* Separación de 20px desde el borde inferior */
+
+            }
+            @keyframes recorrer {
+            0% { right: 100%; } /* Inicia fuera de la pantalla a la derecha */
+            100% { right: -100%; } /* Termina fuera de la pantalla a la izquierda */
+
+            }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <img src='{% static "CSS/imagenes3/logo.jpg" %}' >
+    </div>
+    <header class="titulo">
+        <h1>MICHES EL WINNIE</h1>
+        <h2 >Jimenez Hernandez Tania...Lopez Jose Daniel...Martinez Sanchez Giovanni Zuriel...Navarrete Ramirez Monica...Telesforo Lopez Yakelin</h2>
+    </header>
+    <section class="mi-section">
+        <img src='{% static "CSS/imagenes3/coctel.jpg" %}' >
+        <img src="{% static 'CSS/imagenes3/margarita.jpg' %}">
+        <img src="{% static 'CSS/imagenes3/drinkvariado.jpg' %}">
+        <img src="{% static 'CSS/imagenes3/michelada.jpg' %}">
+        <img src="{% static 'CSS/imagenes3/mojito.jpg' %}">
+        <img src="{% static 'CSS/imagenes3/tequila.jpg' %}">
+        <img  src="{% static 'CSS/imagenes3/vodka.jpg' %}" >
+        <img src="{% static 'CSS/imagenes3/vodkadrink.jpg' %}">
+    </section>
+
+    <footer>
+        <p>Telefono: 5545733163</p>
+        <p>Gmail: micheselwinni@hmail.com</p>
+    </footer>
+    <p class="centro">Centro Chelero</p>
+</body>
+</html>
